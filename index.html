@@ -1,50 +1,170 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="css/reset.css">
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+	<title>reveal.js</title>
 
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/monokai.css">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/black.css">
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="lib/css/monokai.css">
+	<link rel="stylesheet" href="css/theme/sky.css" id="theme">
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<div>
+					Alexa Skill Workshop
+				</div>
+				<div>
+					Madhura Vadvalkar
+				</div>
+			</section>
+			<section>
+				<h4>What will we learn today</h4>
+				<ul>
+					<li>What is Alexa Skill and How it works</li>
+					<li>Understanding the Interaction Model and Situational Design </li>
+					<li>Designing our first Alexa SKill</li>
+					<li>Create our Alexa Skill in the skill console</li>
+				</ul>
+			</section>
+			<section>
+				<img data-src="lightsoff.png">
+			</section>
+			<section>
+				<section>
+					<h4>How Does Alexa Work</h4>
+					<img data-src="alexaIntro.png">
+				</section>
+				<section>
+
+					<iframe width="960" height="515" src="https://www.youtube.com/embed/cakcsuzS2DY" frameborder="0"
+						allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+						allowfullscreen></iframe>
+
+				</section>
+			</section>
+			<section>
+				<section>
+					<h4>Designing Alexa Interactions</h4>
+					<img data-src="situationalDesign.png">
+				</section>
+				<section>
+					Challenges
+					<iframe width="960" height="515" src="https://www.youtube.com/embed/Gr59BrDWnIE" frameborder="0"
+						allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+						allowfullscreen></iframe>
+				</section>
+				<section>
+					<iframe width="960" height="515" src="https://www.youtube.com/embed/cn308bvNBq4" frameborder="0"
+						allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+						allowfullscreen></iframe>
+				</section>
+			</section>
+			<section>
+				<section data-transition="none">
+					<h4>Understanding Interaction Model</h4>
+					<span style="color:orange; text-decoration: underline;">Alexa</span>
+					<span>Tell</span>
+					<span>Plan My Trip</span>
+					<span>I like to take a trip</span>
+					<span>next Friday</span>
+				</section>
+				<section data-transition="none">
+					<h4>Understanding Interaction Model</h4>
+					<span>Alexa</span>
+					<span style="color:orange; text-decoration: underline;">Tell</span>
+					<span>Plan My Trip</span>
+					<span>I like to take a trip</span>
+					<span>next Friday</span>
+				</section>
+				<section data-transition="none">
+					<h4>Understanding Interaction Model</h4>
+					<span>Alexa</span>
+					<span>Tell</span>
+					<span style="color:orange; text-decoration: underline;">Plan My Trip</span>
+					<span>I like to take a trip</span>
+					<span>next Friday</span>
+				</section>
+				<section data-transition="none">
+					<h4>Understanding Interaction Model</h4>
+					<span>Alexa</span>
+					<span>Tell</span>
+					<span>Plan My Trip</span>
+					<span style="color:orange; text-decoration: underline;">I like to take a trip</span>
+					<span>next Friday</span>
+				</section>
+				<section data-transition="none">
+					<h4>Understanding Interaction Model</h4>
+					<span>Alexa</span>
+					<span>Tell</span>
+					<span>Plan My Trip</span>
+					<span>I like to take a trip</span>
+					<span style="color:orange; text-decoration: underline;">next Friday</span>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h4>Let’s get started!</h4>
+					<p>Cake Walk a simple skill that:</p>
+					<ul>
+						<li>Asks the user for their birthday</li>
+						<li>Gets users birthday and reprompts it to them</li>
+					</ul>
+				</section>
+				<section>
+					<img data-src="cakeWalkDesign.png">
+				</section>
+			</section>
+			<section>
+				<h4>Setup</h4>
+				<p> Take 10 min to setup the Amazon developer account</p>
+				<p> Once that is done navigate to the alexa</p>
+				<p> https://developer.amazon.com/alexa/console/ask</p>
+			</section>
+			<section>
+				<iframe width="960" height="515" src="https://www.youtube.com/embed/1pvR4aqwGhg" frameborder="0"
+					allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+					allowfullscreen></iframe>
+			</section>
+			<section> Lets take 10-15 min to do the design setup</section>
+			<section> Lets look at the backend</section>
 		</div>
+	</div>
 
-		<script src="js/reveal.js"></script>
+	<script src="js/reveal.js"></script>
 
-		<script>
-			// More info about config & dependencies:
-			// - https://github.com/hakimel/reveal.js#configuration
-			// - https://github.com/hakimel/reveal.js#dependencies
-			Reveal.initialize({
-				hash: true,
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/highlight/highlight.js' },
-					{ src: 'plugin/notes/notes.js', async: true }
-				]
-			});
-		</script>
-	</body>
+	<script>
+		// More info about config & dependencies:
+		// - https://github.com/hakimel/reveal.js#configuration
+		// - https://github.com/hakimel/reveal.js#dependencies
+		Reveal.initialize({
+			hash: true,
+			dependencies: [
+				{ src: 'plugin/markdown/marked.js' },
+				{ src: 'plugin/markdown/markdown.js' },
+				{ src: 'plugin/highlight/highlight.js' },
+				{ src: 'plugin/notes/notes.js', async: true }
+			]
+		});
+	</script>
+</body>
+
 </html>
