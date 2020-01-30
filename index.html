@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-	<title>reveal.js</title>
+	<title>Alexa Skill Workshop</title>
 
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/reveal.css">
@@ -13,7 +13,8 @@
 
 	<!-- Theme used for syntax highlighting of code -->
 	<link rel="stylesheet" href="lib/css/monokai.css">
-	<link rel="stylesheet" href="css/theme/sky.css" id="theme">
+	<link rel="stylesheet" href="css/theme/league.css" id="theme">
+	<!-- <link rel="stylesheet" href="css/theme/sky.css" id="theme"> -->
 
 	<!-- Printing and PDF exports -->
 	<script>
@@ -29,28 +30,41 @@
 	<div class="reveal">
 		<div class="slides">
 			<section>
-				<div>
+				<h3>
 					Alexa Skill Workshop
-				</div>
+				</h3>
 				<div>
-					Madhura Vadvalkar
+					#alexa-skill-workshop
+				</div>
+				<div style="font-family: fantasy; margin-top: 40px; color: cyan;">
+					Madhura Vadvalkar (Maddy/Madhi)
 				</div>
 			</section>
 			<section>
-				<h4>What will we learn today</h4>
+				<h3>What will we learn today</h3>
 				<ul>
-					<li>What is Alexa Skill and How it works</li>
-					<li>Understanding the Interaction Model and Situational Design </li>
-					<li>Designing our first Alexa SKill</li>
-					<li>Create our Alexa Skill in the skill console</li>
+					<li> Why build Alexa Skill</li>
+					<li> What is Alexa Skill and How it works</li>
+					<li> Understand Key Concepts: Interaction Model and Situational Design </li>
+					<li> Design our first Alexa Skill</li>
+					<li> Create our Alexa Skill in the skill console</li>
 				</ul>
 			</section>
 			<section>
-				<img data-src="lightsoff.png">
+				<section>
+					<h3> Why Build Alexa Skills</h3>
+				</section>
+				<section>
+					<iframe src="https://giphy.com/embed/9QiK1QcQhKMWk" width="518" height="680" frameBorder="0"
+						class="giphy-embed" allowFullScreen></iframe>
+				</section>
+				<section> <img data-src="amazonAlexaStat.jpg"></section>
 			</section>
 			<section>
 				<section>
-					<h4>How Does Alexa Work</h4>
+					<h3>How Does Alexa Work</h3>
+				</section>
+				<section>
 					<img data-src="alexaIntro.png">
 				</section>
 				<section>
@@ -63,11 +77,13 @@
 			</section>
 			<section>
 				<section>
-					<h4>Designing Alexa Interactions</h4>
+					<h3>Designing Alexa Interactions</h3>
+					<h5>Situational Design</h5>
+				</section>
+				<section>
 					<img data-src="situationalDesign.png">
 				</section>
 				<section>
-					Challenges
 					<iframe width="960" height="515" src="https://www.youtube.com/embed/Gr59BrDWnIE" frameborder="0"
 						allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
 						allowfullscreen></iframe>
@@ -79,54 +95,93 @@
 				</section>
 			</section>
 			<section>
-				<section data-transition="none">
-					<h4>Understanding Interaction Model</h4>
-					<span style="color:orange; text-decoration: underline;">Alexa</span>
-					<span>Tell</span>
-					<span>Plan My Trip</span>
-					<span>I like to take a trip</span>
-					<span>next Friday</span>
+				<section>
+					<h3>Understanding Interaction Model</h3>
 				</section>
 				<section data-transition="none">
-					<h4>Understanding Interaction Model</h4>
-					<span>Alexa</span>
-					<span style="color:orange; text-decoration: underline;">Tell</span>
-					<span>Plan My Trip</span>
-					<span>I like to take a trip</span>
-					<span>next Friday</span>
+					<div style="padding-bottom: 50px;">
+						<span style="color:orange; font-style: italic; text-decoration: underline;">Alexa</span>
+						<span>Tell</span>
+						<span>Plan My Trip</span>
+						<span>I like to take a trip</span>
+						<span>next Friday</span>
+					</div>
+					<div class="fragment fade-up" style="font-size: 0.8em; margin-top: 50px; font-style: italic;"> Wake
+						word: The wake word
+						tells Alexa to start listening to your commands.</div>
+
 				</section>
 				<section data-transition="none">
-					<h4>Understanding Interaction Model</h4>
-					<span>Alexa</span>
-					<span>Tell</span>
-					<span style="color:orange; text-decoration: underline;">Plan My Trip</span>
-					<span>I like to take a trip</span>
-					<span>next Friday</span>
+					<div style="padding-bottom: 50px;">
+						<span>Alexa</span>
+						<span style="color:orange; font-style: italic; text-decoration: underline;">Tell</span>
+						<span>Plan My Trip</span>
+						<span>I like to take a trip</span>
+						<span>next Friday</span>
+					</div>
+					<div class="fragment fade-up" style="font-size: 0.8em; margin-top: 50px; font-style: italic;">
+						Launch word: A launch
+						word is a transitional action word that signals Alexa that a skill invocation will likely
+						follow. Sample launch words include tell, ask, open, launch, and use.
+					</div>
 				</section>
 				<section data-transition="none">
-					<h4>Understanding Interaction Model</h4>
-					<span>Alexa</span>
-					<span>Tell</span>
-					<span>Plan My Trip</span>
-					<span style="color:orange; text-decoration: underline;">I like to take a trip</span>
-					<span>next Friday</span>
+					<div style="padding-bottom: 50px;">
+						<span>Alexa</span>
+						<span>Tell</span>
+						<span style="color:orange; font-style: italic; text-decoration: underline;">Plan My Trip</span>
+						<span>I like to take a trip</span>
+						<span>next Friday</span>
+					</div>
+					<div class="fragment fade-up" style="font-size: 0.8em; margin-top: 50px; font-style: italic;">
+						Invocation name: To begin
+						interacting with a skill, a user says the skill's invocation name. For example, to use the Daily
+						Horoscope skill, the user could say, "Alexa, read my daily horoscope."</div>
 				</section>
 				<section data-transition="none">
-					<h4>Understanding Interaction Model</h4>
-					<span>Alexa</span>
-					<span>Tell</span>
-					<span>Plan My Trip</span>
-					<span>I like to take a trip</span>
-					<span style="color:orange; text-decoration: underline;">next Friday</span>
+					<div style="padding-bottom: 50px;">
+						<span>Alexa</span>
+						<span>Tell</span>
+						<span>Plan My Trip</span>
+						<span style="color:orange; font-style: italic; text-decoration: underline;">I like to take a
+							trip</span>
+						<span>next Friday</span>
+					</div>
+					<div class="fragment fade-up" style="font-size: 0.8em; margin-top: 50px; font-style: italic;">
+						Utterance: Simply put, an
+						utterance is a user's spoken request. These spoken requests can invoke a skill, provide inputs
+						for a skill, confirm an action for Alexa, and so on. Consider the many ways a user could form
+						their request.</div>
+				</section>
+				<section data-transition="none">
+					<div style="padding-bottom: 50px;">
+						<span>Alexa</span>
+						<span>Tell</span>
+						<span>Plan My Trip</span>
+						<span>I like to take a trip</span>
+						<span style="color:orange; font-style: italic; text-decoration: underline;">next Friday</span>
+					</div>
+					<div class="fragment fade-up" style="font-size: 0.8em; margin-top: 50px; font-style: italic;"> Slot
+						value: Slots are
+						input values provided in a user's spoken request. These values help Alexa figure out the
+						user's intent.</div>
+				</section>
+				<section>
+					<h3> Some Examples for Practice</h3>
+					<ul>
+						<li>Alexa ask deebot start cleaning</li>
+						<li>Alexa tell myreader to play Manchester by the Sea</li>
+						<li>Alexa ask StockChecker to check stock price for TSLA</li>
+					</ul>
 				</section>
 			</section>
 			<section>
 				<section>
-					<h4>Let’s get started!</h4>
-					<p>Cake Walk a simple skill that:</p>
+					<h3>Let’s get started with our first skill</h3>
+					<div style="float: left; padding-left: 18%; padding-bottom: 20px;"><span style="font-style: italic;">"Cake Walk" </span>is a simple skill that -</div>
 					<ul>
 						<li>Asks the user for their birthday</li>
-						<li>Gets users birthday and reprompts it to them</li>
+						<li>Gets users birthday and reprompts it</li>
 					</ul>
 				</section>
 				<section>
@@ -134,18 +189,25 @@
 				</section>
 			</section>
 			<section>
-				<h4>Setup</h4>
-				<p> Take 10 min to setup the Amazon developer account</p>
-				<p> Once that is done navigate to the alexa</p>
-				<p> https://developer.amazon.com/alexa/console/ask</p>
+				<h3>Account Setup and Alexa Developer Console</h3>
+				<ul>
+					<li> Lets take 5-10 min to setup the amazon developer account.</li>
+					<li> Navigate to Alexa Developer Console</li>
+					<li> See #alexa-skill-workshop for links</span>
+				</ul>
 			</section>
 			<section>
 				<iframe width="960" height="515" src="https://www.youtube.com/embed/1pvR4aqwGhg" frameborder="0"
 					allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
 					allowfullscreen></iframe>
 			</section>
-			<section> Lets take 10-15 min to do the design setup</section>
-			<section> Lets look at the backend</section>
+			<section> Let us take next 15 minutes to do the "Cake Walk" skill design in the Alexa developer console</section>
+			<section> Let us take a look at the how to update "Intents" and "Slots"</section>
+			<section>
+				<h3> Thank You! Please fill out the survey using the QR code or link on the slack channel.</h3>
+
+				<img data-src="alexaSurveyQrCode.png">
+			</section>
 		</div>
 	</div>
 
